@@ -42,4 +42,7 @@ def ln(x: float) -> float:
             break
     return s
 
-print(ln(123))
+print(f"sqrt(10): {sqrt(10)}")
+print(f"factorial(10): {factorial(10)}")
+print(f"ex(3): {ex(3)}")
+print(f"ln(3): {ln(3)}")
