@@ -29,6 +29,8 @@ def factorial(x: int) -> int:
 def exp(x: float) -> float:
     acc = 1.0
     i = 1
+    # Implements e^x taylor series estimation:
+    # 1 + x + x^2/2 + x^3/6 + ...
     while True:
         acc_old = acc
         acc += (x**i) / float(factorial(i))
@@ -37,10 +39,11 @@ def exp(x: float) -> float:
         i+=1
     return acc
 
-# log
 def ln(x: float) -> float:
     s = x
     i = 0
+    # Implements ln(x) taylor series estimation:
+    # Sum_k=1->inf((-1)^k(-1 + x)^-k/k)
     while True:
         s_old = s
         s = s - 1 + x * exp(-s) 
